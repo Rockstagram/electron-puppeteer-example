@@ -1,0 +1,27 @@
+{
+  "name": "electron-puppeteer-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application with puppeteer",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "build"
+  },
+  "repository": "https://github.com/Raidus/electron-puppeteer-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "puppeteer-core": "^1.11.0"
+  },
+  "devDependencies": {
+    "electron": "^4.0.2",
+    "electron-builder": "^20.38.5"
+  }
+}
