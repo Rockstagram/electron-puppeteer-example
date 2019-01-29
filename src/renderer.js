@@ -2,11 +2,6 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 const puppeteer = require("puppeteer-core");
-
-const remote = require("electron").remote;
-const app = remote.app;
-console.log("userData", app.getPath("userData"));
-
 let executablePath;
 
 // renderer process
