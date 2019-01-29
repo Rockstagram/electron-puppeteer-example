@@ -18,7 +18,11 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "dependencies": {
-    "puppeteer-core": "^1.11.0"
+    "electron-dl": "^1.13.0",
+    "extract-zip": "^1.6.7",
+    "node-fetch": "^2.3.0",
+    "puppeteer-core": "^1.11.0",
+    "rimraf": "^2.6.3"
   },
   "devDependencies": {
     "electron": "^4.0.2",

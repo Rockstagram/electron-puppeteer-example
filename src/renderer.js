@@ -3,14 +3,29 @@
 // All of the Node.js APIs are available in this process.
 const puppeteer = require("puppeteer-core");
 
-// "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+const remote = require("electron").remote;
+const app = remote.app;
+console.log("userData", app.getPath("userData"));
+
+let executablePath;
+
+// renderer process
+var ipcRenderer = require("electron").ipcRenderer;
+ipcRenderer.on("chrome-load", () => {
+  document.querySelector("#chromium").innerHTML = "loading…";
+  console.log("loading…");
+});
+
+ipcRenderer.on("chrome-success", (event, arg) => {
+  document.querySelector("#chromium").innerHTML = arg;
+  console.log("success", event, arg);
+  executablePath = arg;
+});
 
 async function getPic(url) {
   const browser = await puppeteer.launch({
     headless: false,
-    executablePath:
-      // puppeteer.executablePath()
-      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    executablePath
   });
   const page = await browser.newPage();
   await page.goto(url);
