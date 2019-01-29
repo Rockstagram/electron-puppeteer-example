@@ -7,3 +7,5 @@ An example of Puppeteer launch within an Electron APP.
 This file handles the chromium logic.
 If the user has Chrome, then the executable path will be the one from the local chrome.
 If the user does not have Chrome, then the chromium matching his OS is downloaded and used as executable path.
+
+This is necessary because packed electron apps can’t execute a Chromium instance from inside. It has to be an external executable…
